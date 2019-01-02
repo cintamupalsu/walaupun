@@ -1,3 +1,8 @@
+# -----------------------------------
+# 01.01 2019.01.02 By Arief Maulana
+# -----------------------------------
+# 01.01 2019.01.02 Devise
+# -----------------------------------
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -34,7 +39,9 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
-
+  # 01.01 2019.01.02 >>>
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  # 01.01 2019.01.02 <<<
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

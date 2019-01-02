@@ -1,3 +1,8 @@
+# -----------------------------------
+# 01.01 2019.01.02 By Arief Maulana
+# -----------------------------------
+# 01.01 2019.01.02 Devise
+# -----------------------------------
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -35,6 +40,10 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
+
+# 01.01 2019.01.02 >>>
+gem 'devise'
+# 01.01 2019.01.02 <<<
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
