@@ -1,7 +1,9 @@
 # -----------------------------------
 # 01.01 2019.01.02 By Arief Maulana
+# 02.01 2019.01.02 By Arief Maulana
 # -----------------------------------
 # 01.01 2019.01.02 Devise
+# 02.01 2019.01.02 Ancestry
 # -----------------------------------
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -44,6 +46,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # 01.01 2019.01.02 >>>
 gem 'devise'
 # 01.01 2019.01.02 <<<
+# 02.01 2019.01.02 >>>
+gem 'ancestry'
+# 02.01 2019.01.02 <<<
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

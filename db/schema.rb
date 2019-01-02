@@ -10,7 +10,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_02_062812) do
+ActiveRecord::Schema.define(version: 2019_01_02_074859) do
+
+  create_table "book_items", force: :cascade do |t|
+    t.integer "book_id"
+    t.integer "book_structure_id"
+    t.text "content"
+    t.integer "rank"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "ancestry"
+    t.index ["ancestry"], name: "index_book_items_on_ancestry"
+    t.index ["book_id"], name: "index_book_items_on_book_id"
+    t.index ["book_structure_id"], name: "index_book_items_on_book_structure_id"
+  end
+
+  create_table "book_structures", force: :cascade do |t|
+    t.integer "book_id"
+    t.string "level"
+    t.integer "rank"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["book_id"], name: "index_book_structures_on_book_id"
+  end
+
+  create_table "books", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "languages", force: :cascade do |t|
     t.string "name"
