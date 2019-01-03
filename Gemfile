@@ -1,9 +1,11 @@
 # -----------------------------------
-# 01.01 2019.01.02 By Arief Maulana
-# 02.01 2019.01.02 By Arief Maulana
+# 01.01 2019.01.02 by Arief Maulana
+# 02.01 2019.01.02 by Arief Maulana
+# 03.01 2019.01.03 by Arief Maulana
 # -----------------------------------
 # 01.01 2019.01.02 Devise
 # 02.01 2019.01.02 Ancestry
+# 03.01 2019.01.03 Bootstrap
 # -----------------------------------
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
@@ -49,6 +51,10 @@ gem 'devise'
 # 02.01 2019.01.02 >>>
 gem 'ancestry'
 # 02.01 2019.01.02 <<<
+# 03.01 2019.01.03 >>>
+gem 'bootstrap', '~>4.2.1'
+gem 'jquery-rails'
+# 03.01 2019.01.03 <<<
 
 
 group :development, :test do

@@ -1,0 +1,20 @@
+<header class="navbar navbar-fixed-top navbar-dark bg-light shadow-lg">
+  <div class="container">
+    <a class="navbar-brand text-dark" href=<%= root_path %>>♖<small class="ml-1">References</small></a>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <%= link_to "Home", root_path, class:"nav-link" %>
+      </li>
+      <% if user_signed_in? %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >Profile</a>
+          <div class="dropdown-menu">
+            <%= link_to "Setting", edit_user_registration_path, class:"dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, :class => 'dropdown-item' %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</header>
